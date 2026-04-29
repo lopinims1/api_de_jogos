@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "game": "Counter Strike: Global Offensive",
+        "publisher": "Valve",
+        "year": 2012
+    },
+    {
+        "id": 2,
+        "game": "Albion Online",
+        "publisher": "CD Projekt",
+        "year": 2017
+    },
+    {
+        "id": 3,
+        "game": "Roblox",
+        "publisher": "Roblox",
+        "year": 2006
+    },
+    {
+        "id": 4,
+        "game": "Pokemon GO",
+        "publisher": "Nintendo",
+        "year": 2016
+    },
+    {
+        "id": 5,
+        "game": "Minecraft",
+        "publisher": "Mojang",
+        "year": 2009
+    },
+    {
+        "id": 6,
+        "game": "Forza Horizon 6",
+        "publisher": "Microsoft",
+        "year": 2026
+    }
+]
+
