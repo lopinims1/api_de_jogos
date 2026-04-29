@@ -1,0 +1,1 @@
+import { getAllGames, getGameById, createGame, updateGame, deleteGame } from '../service/gamesService.js'
