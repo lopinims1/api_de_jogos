@@ -11,4 +11,4 @@ async function writeGames(games) {
     await fs.writeFile('./src/data/games.json', data, 'utf-8')
 }
 
-export default readGames 
+export { readGames, writeGames }

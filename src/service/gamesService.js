@@ -1,4 +1,4 @@
-import readGames from '../config/db.js'
+import { readGames, writeGames } from '../config/db.js'
 
 class GamesServices {
     async getAll() {
@@ -15,6 +15,30 @@ class GamesServices {
         const game = games.find(g => g.id === Number(id))
         return game
     }
+
+    async create({ game, publisher, year }) {
+        const games = await readGames()
+        const newGame = {
+            id: games.length > 0 ? Math.max(...games.map(g => g.id)) + 1 : 1,
+            game,
+            publisher,
+            year
+        }
+        
+        games.push(newGame)
+        await writeGames(games)
+        return newGame
+    }
+
+    async delete(id) {
+        const games = await readGames()
+        const index = games.findIndex(g => g.id === Number(id))
+        if (index === -1) return null
+        const [removed] = games.splice(index, 1)
+        await writeGames(games)
+        return removed
+    }
+
 };
 
 export const gameServices = new GamesServices();
